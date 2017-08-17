@@ -16,6 +16,6 @@
   "author": "duy",
   "license": "ISC",
   "dependencies": {
-    "nexmo": "^2.0.2"
+    "twilio": "^3.6.2"
   }
 }
