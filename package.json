@@ -16,6 +16,6 @@
   "author": "duy",
   "license": "ISC",
   "dependencies": {
-    "nexmo": "^2.0.2"
+    "request": "^2.81.0"
   }
 }
