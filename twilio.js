@@ -12,5 +12,19 @@ var aMsg = {
 };
 
 client.messages.create(aMsg)
-    .then(sent => console.log(sent))
+    .then(checkStatus)
     .catch(err => { throw err });
+
+function checkStatus(sentMsg) {
+
+    console.log(sentMsg);
+    console.log(new Date() + "=".repeat(45));
+
+    client.messages(sentMsg.sid).get((err, info) => {
+        if (err) throw err;
+        console.log(info);
+        // if (sentMsg.status != "sent")
+        //     setTimeout(() => checkStatus(sentMsg), 2000);
+    });
+
+}
