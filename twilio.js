@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 var aMsg = {
     to: '+841665501483', // recipient
     from: '+16282276116', // valid Twilio number
-    body: 'Gửi đc unicode k ấy nhỉ',
+    body: process.argv[2] || 'Gửi đc unicode k ấy nhỉ',
 };
 
 client.messages.create(aMsg)
